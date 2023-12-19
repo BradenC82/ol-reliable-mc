@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  realm-survival:
+    image: itzg/minecraft-server
+    environment:
+      # Accepts the EULA aggreement required by microsoft to execute the server
+      EULA: "true"
+    ports:
+      # Links the host's port to the container's port
+      # Enables clients connecting to the hosts port to be patched through to the container
+      - "25565:25565" 
+    volumes:
+      # Links the host's directory to the container's directory.
+      # Data written to the data folder within the container is persisted on the data folder on the host
+      - data:/realm-survival/data 
+    stdin_open: true
+    tty: true
+    # Restarts the container in the event of a failure exit code
+    # Restarts a maximum of 3 times before abandoning
+    restart: on-failure:3
+
+  realm-creative:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "true"
+      MODE: "creative"
+      FORCE_GAMEMODE: false
+      SERVER_PORT: 25566
+    ports:
+      - "25566:25566"
+    volumes:
+      - data:/realm-creative/data
+    stdin_open: true
+    tty: true
+    restart: on-failure:3
