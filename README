@@ -1,2 +1,10 @@
 # Ol Reliable MC
 A repository to help you deploy a reliable Cloud Based Minecraft Server.
+
+Run this command, if necessary, to ensure your key is not publicly viewable.
+```chmod 400 minecraft-host-key.pem```
+
+make connect
+
+git config user.name "Braden Collingwood"
+git config user.email bradencollingwood82@gmail.com

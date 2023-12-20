@@ -13,7 +13,7 @@ services:
     volumes:
       # Links the host's directory to the container's directory.
       # Data written to the data folder within the container is persisted on the data folder on the host
-      - data:/realm-survival/data 
+      - ./data:/realm-survival/data 
     stdin_open: true
     tty: true
     # Restarts the container in the event of a failure exit code
@@ -30,7 +30,7 @@ services:
     ports:
       - "25566:25566"
     volumes:
-      - data:/realm-creative/data
+      - ./data:/realm-creative/data
     stdin_open: true
     tty: true
     restart: on-failure:3
