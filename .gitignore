@@ -1,0 +1,13 @@
+# Ignore ec2 ssh key
+minecraft-host-key.pem
+
+# Ignore serverless manifest files
+**/.serverless/**
+serverless.manifest.json
+.serverless/manifest.json
+
+# Ignore binaries
+**/bin/**
+
+.DS_Store
+**/.vscode/*
