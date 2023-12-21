@@ -1,5 +1,6 @@
 # Ignore ec2 ssh key
 minecraft-host-key.pem
+secrets.md
 
 # Ignore serverless manifest files
 **/.serverless/**

@@ -3,6 +3,9 @@
     "allowCompoundWords": true,
     "ignorePaths": [],
     "ignoreRegExpList": [],
-    "words": [],
+    "words": [
+        "buildx",
+        "dearmor"
+    ],
     "ignoreWords": []
 }
